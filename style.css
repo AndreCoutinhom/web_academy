@@ -1,1 +1,67 @@
-/* Documento de estilização em CSS */
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #044C92;
+    margin: 0px auto;
+    margin-bottom: 5px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1, header nav {
+    flex: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #F7FDFF;
+}
+
+div {
+    text-align: center;
+}
+
+header h1 {
+    color: #F7FDFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #F7FDFF;
+    flex: 1;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a:hover {
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+img {
+    width: 20%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+#perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

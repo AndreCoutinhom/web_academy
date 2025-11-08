@@ -28,7 +28,7 @@ function onInit() {
 
 /* ========================================================================= */
 
-/* Isso é pra evitar que o usuário recebe erros antes de digitar "tudo" na primeira tentativa */
+/* Isso é pra evitar que o usuário receba erros antes de digitar "tudo" na primeira tentativa */
 
 function UpdateFirstInput(input) {
   if (input === "name") firstInputName = false;
@@ -52,7 +52,7 @@ function FormIsValid(form) {
     CPFIsValid(cpfField) &&
     EmailIsValid(emailField) &&
     PasswordIsValid(passwordField) &&
-    PasswordsAreValid(form.passwordField, form.passwordConfirmationField);
+    PasswordsAreValid(form.password, form.passwordConfirmation); // Nesse caso, preciso do elemento (tag), não do valor inicialmente
 
   buttonSubmit.disabled = !valid;
 
@@ -68,7 +68,7 @@ function SaveUserData() {
   const newUser = {
     id: users.length + 1,
     name: nameField,
-    cpf: cpfField,
+    cpf: cpfField /*The CPF is saved without formatting.*/,
     email: emailField,
     password: passwordField,
   };
@@ -111,6 +111,14 @@ function formatCPF(raw) {
 }
 
 function CPFIsValid(cpfRef) {
+  /* 
+    Examples of valid CPFs:
+
+    88838607800
+    44691566201
+    13428879562
+  */
+
   if (firstInputCPF) {
     alertCPF.style.display = "none";
     return;
@@ -189,7 +197,6 @@ function PasswordIsValid(password) {
 
   alertPassword.style.display = "none";
 
-  // Atualiza validação da confirmação
   const passwordConfirmation = document.getElementById("passwordConfirmation");
   if (passwordConfirmation && passwordConfirmation.value.length > 0)
     PasswordsAreValid(

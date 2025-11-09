@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./login.css" />
+    <title>SEM PARADA | LOGIN</title>
+  </head>
+  <body>
+    <header>
+      <h1>SEM PARADA</h1>
+      <nav class="menu">
+        <a href="">PRINCIPAL</a>
+        <a href="">OFERTAS</a>
+        <a href="">HISTÓRICO</a>
+        <a id="perfil" href=""
+          >Nome
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+            alt="profile"
+        /></a>
+      </nav>
+    </header>
+    <main>
+      <section id="login">
+        <div id="loginTitle">
+          <h1>Login</h1>
+          <hr />
+        </div>
+        <p>Entre com sua conta para começar</p>
+        <form id="formsLogin" onsubmit="return ValidateLogin(this)">
+          <small
+            id="errorLoginOrPassword"
+            class="inputError"
+            style="color: red; padding-top: 1rem"
+          ></small>
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            size="15"
+            maxlength="50"
+            required
+          />
+          <label for="password">Senha</label>
+          <div class="togglePasswordContainer" id="togglePasswordContainer1">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              size="15"
+              maxlength="50"
+              required
+              oninput="PasswordIsValid(this.value),
+              FormIsValid(this.form), PasswordsAreValid()"
+              onchange="UpdateFirstInput('password'), PasswordIsValid(this.value)"
+            />
+
+            <button
+              type="button"
+              class="togglePasswordVisibility"
+              onclick="TogglePasswordVisibility(1)"
+              onmouseleave="TogglePasswordVisibility(1, true)"
+            >
+              <img
+                src="../public/icons/icon_show.png"
+                alt="Mostrar Senha"
+                id="show-icon-1"
+                class="show-icon"
+              />
+              <img
+                src="../public/icons/icon_hide.png"
+                alt="Ocultar Senha"
+                id="hide-icon-1"
+                class="hide-icon"
+                style="display: none"
+              />
+            </button>
+          </div>
+          <button type="submit">ENTRAR</button>
+        </form>
+        <p id="signinRedirect">
+          Não tem uma conta? <a href="../signin/signin.html">Cadastre-se</a>
+        </p>
+      </section>
+    </main>
+    <footer>
+      <h5>© 2025 Sem Parada. Todos os direitos reservados.</h5>
+    </footer>
+    <script src="../global.js"></script>
+    <script src="./login.js"></script>
+  </body>
+</html>

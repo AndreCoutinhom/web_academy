@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="div3">
+    <div class="login">
+        <div class="informaçoes">
+            <h1>Cadastre-se</h1>
+
+            <div class="inp">
+                <div class="in1">
+                    <img src="assets/perfil.png" alt="">
+                    <input type="text" placeholder="Nome de usuario">
+                </div>
+
+                <div class="in2">
+                    <img src="assets/telefone.png" alt="">
+                    <input type="text" placeholder="Telefone">
+                </div>
+
+                <div class="in3">
+                    <img src="assets/email.webp" alt="">
+                    <input type="text" placeholder="E-mail">
+                </div>
+
+                <div class="in4">
+                    <img src="assets/img2.png" alt="">
+                    <input type="password" placeholder="senha">
+                    <img class="password" src="assets/olho.png" alt="">
+                </div>
+
+                <div class="in4">
+                    <img src="assets/img2.png" alt="">
+                    <input type="password" placeholder="confirmar senha">
+                    <img class="password" src="assets/olho.png" alt="">
+                </div>
+
+                <div class="error-message" style="display:none;">
+                    <img src="assets/exclamation.png" alt="">
+                    <span>Mensagem de erro aqui</span>
+                </div>
+            </div>
+
+            <div class="botao">
+                <button class="b1">cadastrar</button>
+                <a href="/" class="b2">voltar</a>
+            </div>
+        </div>
+
+        <div class="bem-vinda">
+            <h1 class="h1">Bem-Vinda!</h1>
+            <h1 class="h2">Pronta para realçar sua beleza?</h1>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" style="display:none;">
+        <div class="modal-content">
+            <img src="assets/check.png" alt="">
+            <h2>PARABÉNS!</h2>
+            <p>Cadastro realizado com sucesso!</p>
+            <button>fechar</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

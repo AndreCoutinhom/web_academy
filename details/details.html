@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./details.css" />
+    <title>SEM PARADA | DETALHES</title>
+  </head>
+  <body>
+    <header>
+      <h1>SEM PARADA</h1>
+      <nav class="menu">
+        <a href="../index.html">PRINCIPAL</a>
+        <a href="">OFERTAS</a>
+        <a href="">HISTÓRICO</a>
+        <a id="perfil" href=""
+          >Nome
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+            alt="profile"
+        /></a>
+      </nav>
+    </header>
+    <main>
+      <section id="details">
+        <h1>DETALHES:</h1>
+
+        <div id="travelArea">
+          <h2 id="destination">SÃO PAULO - SANTOS</h2>
+          <div>
+            <div id="categoryArea">
+              <p id="category">Executiva</p>
+              <p id="basePrice">R$ 450,00 (Inteira)</p>
+            </div>
+            <div id="infoGoing">
+              <p>Ida</p>
+              <p class="infoDate">17/11/2025 às 12:15hrs</p>
+            </div>
+            <div id="infoBack">
+              <p>Volta</p>
+              <p class="infoDate">21/11/2025 às 10:30hrs</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="seat-container">
+          <div class="seat-row seat-header">
+            <div class="col-id">ID</div>
+            <div class="col-nome">Nome</div>
+            <div class="col-cpf">CPF</div>
+            <div class="col-assento">Assento</div>
+            <div class="col-categoria">Categoria</div>
+            <div class="col-valor">Valor</div>
+            <div class="col-action"></div>
+          </div>
+
+          <form id="seats-form">
+            <div class="seat-row">
+              <div class="col-id">1</div>
+              <div class="col-nome">
+                <input
+                  type="text"
+                  name="name_1"
+                  value="Nome do Cliente"
+                  placeholder="Nome Completo"
+                />
+              </div>
+              <div class="col-cpf">
+                <input
+                  type="text"
+                  name="cpf_1"
+                  value="123.456-789-10"
+                  placeholder="CPF"
+                />
+              </div>
+              <div class="col-seat">B1</div>
+              <div class="col-category">
+                <select
+                  name="categoria_1"
+                  class="categoria-select"
+                  data-target-valor="valor-1"
+                >
+                  <option value="inteira" selected>Inteira</option>
+
+                  <option value="meia">Meia</option>
+                </select>
+              </div>
+              <div class="col-value" id="valor-1">
+                <strong>R$ 450,00</strong>
+              </div>
+              <div class="col-action">
+                <button type="button" class="delete-btn">X</button>
+              </div>
+            </div>
+
+            <div class="ar-row"></div>
+          </form>
+          <button>Voltar</button>
+        </div>
+      </section>
+      <section id="payment">
+        <h2>Pagamento</h2>
+        <div class="payment-option">
+          <input type="radio" name="payment" id="credit" value="credit" />
+          <label for="credit">Cartão de Crédito</label>
+
+          <div
+            class="installments"
+            id="creditInstallments"
+            style="display: none"
+          >
+            <label for="installmentSelect">Número de parcelas:</label>
+            <select id="installmentSelect">
+              <option value="1x">1x</option>
+              <option value="2x">2x</option>
+              <option value="3x">3x</option>
+              <option value="4x">4x</option>
+              <option value="5x">5x</option>
+              <option value="6x">6x</option>
+              <option value="7x">7x</option>
+              <option value="8x">8x</option>
+              <option value="9x">9x</option>
+              <option value="10x">10x</option>
+              <option value="11x">11x</option>
+              <option value="12x">12x</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="payment-option">
+          <input type="radio" name="payment" id="boleto" value="boleto" />
+          <label for="boleto">Boleto</label>
+        </div>
+
+        <div class="payment-option">
+          <input type="radio" name="payment" id="pix" value="pix" />
+          <label for="pix">Pix</label>
+        </div>
+
+        <div class="payment-option">
+          <input type="radio" name="payment" id="debit" value="debit" />
+          <label for="debit">Débito</label>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright © SEM PARADA | Centro Universitário Senac</p>
+    </footer>
+    <script src="../global.js"></script>
+    <script src="./details.js"></script>
+  </body>
+</html>

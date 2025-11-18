@@ -1,0 +1,290 @@
+/* Header */
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #044c92;
+  padding: 0.1rem;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+header h1,
+header nav {
+  flex: 1;
+  padding: 0 1rem;
+  margin: 0;
+}
+
+h1 a {
+  text-decoration: none;
+  color: #f7fdff;
+}
+
+div {
+  text-align: center;
+}
+
+header h1 {
+  color: #f7fdff;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #f7fdff;
+  flex: 1;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav a:hover {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+img {
+  width: 20%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+#perfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ======================================= */
+
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  padding: 1rem 15rem;
+  margin: 0;
+}
+footer {
+  padding: 1rem;
+  margin: 0;
+  text-align: center;
+  background-color: #044c92;
+  color: #ffffff;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* ======================================= */
+
+#details {
+  flex: 2;
+}
+
+#payment {
+  flex: 1;
+  background-color: #858f8e;
+}
+
+#details,
+#payment {
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+section h1 {
+  padding-left: 3rem;
+}
+
+section h2 {
+  text-align: center;
+  color: w;
+}
+
+#travelArea {
+  background-color: #858f8e;
+  padding: 1rem;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+#travelArea > div {
+  display: flex;
+  gap: 20px; /* espaço entre as colunas */
+  align-items: flex-start; /* alinha pelo topo */
+}
+
+#categoryArea,
+#infoGoing,
+#infoBack {
+  flex: 1; /* ocupam espaço igual */
+  padding: 5px;
+  border-radius: 6px;
+  color: white;
+}
+#travelArea > div > div > p:first-child {
+  font-weight: bold;
+}
+
+#travelArea > div > div {
+  background-color: #044c92;
+}
+
+/*====================================================================*/
+.seat-row {
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* AJUSTE: Adicionado display: flex; 
+  Para que 'justify-content' e 'text-align' funcionem corretamente
+  nos itens do cabeçalho.
+*/
+.seat-header {
+  display: flex; /* <-- ADICIONADO */
+  font-weight: bold;
+  background-color: #044c92;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  justify-content: space-between;
+  padding: 0.2rem 1rem;
+  border-radius: 6px;
+}
+
+/* AJUSTE: Adicionada regra para as linhas de dados 
+  (fundo claro, borda inferior) 
+*/
+.seat-row:not(.seat-header) {
+  background-color: #f7f8fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.seat-row > div {
+  padding: 8px;
+}
+
+/* ================================================
+  AJUSTE CRÍTICO: ADICIONADAS AS LARGURAS DAS COLUNAS
+  Sem isso, o layout não se parece com a imagem.
+  ================================================
+*/
+.col-id {
+  flex: 0 0 50px;
+}
+.col-name {
+  flex: 2; /* Ocupa mais espaço */
+}
+.col-cpf {
+  flex: 1.5;
+}
+.col-seat {
+  flex: 0 0 80px; /* Largura fixa */
+}
+.col-category {
+  flex: 1;
+}
+.col-value {
+  flex: 1;
+  font-weight: bold;
+}
+.col-action {
+  flex: 0 0 60px;
+  text-align: right;
+}
+
+/* --- Estilo dos Inputs --- */
+
+.seat-row input[type="text"],
+.seat-row select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.seat-row input[type="text"]:focus,
+.seat-row select:focus {
+  border-color: #6a5acd;
+  outline: none;
+}
+
+/* ================================================
+  AJUSTE CRÍTICO: CORRIGIDO O ALINHAMENTO
+  Removido '.col-seat' desta regra, pois ele é
+  apenas texto, não um input.
+  ================================================
+*/
+.seat-row .col-name,
+.seat-row .col-cpf,
+.seat-row .col-category {
+  /* .col-seat FOI REMOVIDO DAQUI */
+  padding: 6px 8px;
+}
+
+/* --- Estilo do Valor (Preço) --- */
+
+.col-value strong {
+  display: block;
+}
+
+/* AJUSTE: Adicionado o estilo do preço riscado (meia-entrada) */
+.col-value del {
+  color: #999;
+  display: block;
+  font-size: 0.9em;
+  font-weight: normal; /* Deixa o risco mais leve */
+}
+
+/* --- Estilo do Botão Deletar --- */
+
+.delete-btn {
+  background-color: #6a5acd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1em;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #5a4abf;
+}

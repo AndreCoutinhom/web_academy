@@ -83,12 +83,7 @@ nav a:hover {
     font-size: 130%;
 }
 
-#parabens #viajante {
-    width: 200px;
-    margin-top: 0%;
-}
-
-#parabens #motorista {
+#parabens #viajante, #motorista {
     width: 200px;
     margin-top: 0%;
 }

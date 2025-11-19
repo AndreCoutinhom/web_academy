@@ -88,6 +88,11 @@ nav a:hover {
     margin-top: 0%;
 }
 
+#parabens #motorista {
+    width: 200px;
+    margin-top: 0%;
+}
+
 .botoes {
     display: flex;
     justify-content: center;

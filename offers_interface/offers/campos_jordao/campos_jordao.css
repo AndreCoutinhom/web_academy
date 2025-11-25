@@ -1,0 +1,170 @@
+body {
+    background-image: url(https://www.gov.br/g20/pt-br/noticias/presente-e-futuro-das-cidades-maior-metropole-das-americas-sao-paulo-recebe-cupula-do-urban-20/@@images/image-2000-d280960f00b6ad7cbaae4cc620d0c389.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #044C92;
+    margin: 0px auto;
+    margin-bottom: 5px;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1, header nav {
+    font-family: Arial, Helvetica, sans-serif;
+    flex: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #F7FDFF;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #F7FDFF;
+    flex: 1;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav a:hover {
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.menu img {
+    width: 20%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+#perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main_image img {
+    width: 180px;
+}
+
+#boas_vindas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #044C92;
+    background-color: #f7fdff1c;
+    backdrop-filter: blur(50px);
+    transition: background-color 0.5s ease;
+    border: 0.1px solid #f7fdff3a;
+    border-radius: 20px;
+}
+
+#boas_vindas:hover {
+    background-color: #f7fdff42;
+}
+
+#boas_vindas h1 { 
+    margin: 5%;
+    font-size: 350%;
+}
+
+#boas_vindas h2 {
+    margin: 5%;
+    color: black;
+    font-size: 150%;
+}
+
+#boas_vindas p {
+    margin: 5%;
+    display: flex;
+    color: black;
+    font-size: 130%;
+}
+
+#boas_vindas img {
+    margin: 1%;
+    width: 50%;
+    height: auto;
+    border: 0.1px solid #f7fdff3a;
+    border-radius: 20px;
+}
+
+.main_texts {
+    flex: 1;
+    padding: 20px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+}
+
+.botoes button {
+    font-size: 100%;
+    font-weight: bold;
+    background-color: #044C92;
+    color: #F7FDFF;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 1%;
+    border: none;
+    box-shadow: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.botoes button:hover {
+    background-color: #774F9E;
+}
+
+.botoes button a {
+    font-size: 120%;
+    font-weight: bold;
+    color: #F7FDFF;
+    text-decoration: none;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    width: 100%;
+    background-color: #012447;
+
+}
+
+footer p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    color: #858F8E;
+}

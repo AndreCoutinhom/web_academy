@@ -1,56 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cananeia</title>
-    <link rel="stylesheet" href="cananeia.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../../global/global/global.css" />
+    <link rel="stylesheet" href="../../global/header/header.css" />
+    <link rel="stylesheet" href="../../global/footer/footer.css" />
+    <link rel="stylesheet" href="cananeia.css" />
+  </head>
+  <body>
+    <div class="fake-header"></div>
     <header>
- 
-  <h1 id="fName">SEM PARADA</h1>
+      <a class="logo-area" href="/">
+        <img src="../../public/logo/logo.png" alt="Logo Sem Parada" />
+        <h1>Sem Parada</h1>
+      </a>
 
-<nav class="menu">
+      <nav class="menu">
+        <a href="../../offers/offers.html">PASSAGENS</a>
+        <a href="../../history/history.html">HISTÓRICO</a>
+        <a href="../../about-us/about-us.html">SOBRE NÓS</a>
+      </nav>
 
-    <a href="">PRINCIPAL</a>
-    <a href="">OFERTAS</a>
-    <a href="">HISTÓRICO</a>
-    <a id="perfil" href="">Nome <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="profile"></a>
-  </nav> 
-</header>
+      <div class="account-container">
+        <a id="createAccount" href="../../signin/signin.html"> CRIAR CONTA </a>
+        <a id="joinInAccount" href="../../login/login.html"> ENTRAR </a>
+      </div>
 
+      <div class="user-menu-container" style="display: none">
+        <button id="usernameH">
+          <span class="username username-btn">Nome do Usuário</span>
+          <span class="arrow-down">▼</span>
+        </button>
 
-<div class="main" id="boas_vindas">
+        <div id="userDropdown" class="user-menu-dropdown">
+          <div class="user-info">
+            <div class="username username-dd">NAME</div>
+            <div class="email email-dd">name@gmail.com</div>
+          </div>
 
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/PSX_20170624_104357.jpg" alt="cananeia">
+          <hr class="separator" />
 
+          <button class="menu-item logout-button" (click)="logout()">
+            Sair
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main" id="boas_vindas">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/7/76/PSX_20170624_104357.jpg"
+          alt="cananeia"
+        />
 
-  <div class="main_texts">
-      <h1>Vá para a <strong>CANANEIA</strong>!!</h1>
-  <h2>Centro histórico, biodiversidade e acesso à Ilha do Cardoso.</h2>
+        <div class="main_texts">
+          <h1>Vá para a <strong>CANANEIA</strong>!!</h1>
+          <h2>Centro histórico, biodiversidade e acesso à Ilha do Cardoso.</h2>
 
-  <p>
-Cananéia é um município brasileiro no litoral do estado de São Paulo, Região Sudeste do país. Está situado a cerca de 270 km a sul da capital estadual. Ocupa uma área de aproximadamente 1 240 km², sendo que 5 km² estão em área urbana, e sua população foi estimada em 12 491 habitantes em 2025.
-</p>
+          <p>
+            Cananéia é um município brasileiro no litoral do estado de São
+            Paulo, Região Sudeste do país. Está situado a cerca de 270 km a sul
+            da capital estadual. Ocupa uma área de aproximadamente 1 240 km²,
+            sendo que 5 km² estão em área urbana, e sua população foi estimada
+            em 12 491 habitantes em 2025.
+          </p>
 
-    <h2 style="color: #012447;">Quer comprar sua passagem por R$310,00?</h2>
+          <h2 style="color: #012447">
+            Quer comprar sua passagem por R$310,00?
+          </h2>
 
-  <div class="botoes">
-      <button><a href="">Clique aqui</a></button>
-  </div>
+          <div class="botoes">
+            <button><a href="">Clique aqui</a></button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Copyright © SEM PARADA | Centro Universitário Senac</p>
+    </footer>
 
-  </div>
-
-
-  
-
-</div>
-
-
-<footer>
-  <p>Copyright © SEM PARADA | Centro Universitário Senac</p>
-</footer>
-
-</body>
+    <script src="../../global/global.js"></script>
+  </body>
 </html>

@@ -6,16 +6,16 @@ function criptografar(texto, deslocamento = 3) {
     const alfabeto = "abcdefghijklmnopqrstuvwxyz";
 
     for (let letra of texto) {
-        //se não for letra, só adiciona e continua
+        //se não for letra só adiciona e continua
         if (!alfabeto.includes(letra)) {
             resultado += letra;
             continue;
         }
 
-        //vega a posição da letra no alfabeto
+        //pega a posição da letra no alfabeto
         let pos = alfabeto.indexOf(letra);
 
-        //vesloca
+        //desloca
         let novaPos = (pos + deslocamento) % 26;
 
         resultado += alfabeto[novaPos];
@@ -74,4 +74,5 @@ function lerDescriptografado(chave, deslocamento = 3) {
     } catch {
         return texto;
     }
+
 }

@@ -331,9 +331,9 @@ function finalizePurchase() {
       window.location.href =
         "/purchase-confirmation/purchase-confirmation.html";
     } else if (selectedPayment === "pix") {
-      window.location.href = "/pix-payment/pix-payment.html";
+      window.location.href = "/payment-qr-code/payment-qr-code.html";
     } else {
-      window.location.href = "/payment--ticket/payment-ticket.html";
+      window.location.href = "/payment-ticket/payment-ticket.html";
     }
   }, 3000);
 }

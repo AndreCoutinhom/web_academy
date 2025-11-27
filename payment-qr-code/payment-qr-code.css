@@ -1,0 +1,64 @@
+.qrCode-payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  flex-direction: column;
+}
+
+.confirmation-box {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  text-align: center;
+  border-top: 0.2rem solid #044c92;
+  border-bottom: 5px solid #012447;
+}
+
+.confirmation-box h1 {
+  color: #044c92;
+}
+
+.confirmation-box p {
+  margin-bottom: 2rem;
+}
+
+/* ---------------------- */
+.btn,
+.btn:link,
+.btn:visited {
+  background: #044c92;
+  color: #fff;
+  font-weight: bold;
+  margin: 0.5rem 1rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(0.98);
+  transition: 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #044c92;
+  transform: scale(1);
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* QR Code */
+#fakeQRCode {
+  width: 50%;
+  margin: 1rem auto;
+  display: block;
+  border: solid 3px #012447;
+  border-radius: 6px;
+}

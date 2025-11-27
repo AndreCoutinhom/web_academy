@@ -86,11 +86,5 @@ body {
 
 .botoes button:hover {
   background-color: #774f9e;
-}
-
-.botoes button a {
-  font-size: 120%;
-  font-weight: bold;
-  color: #f7fdff;
-  text-decoration: none;
+  cursor: pointer;
 }

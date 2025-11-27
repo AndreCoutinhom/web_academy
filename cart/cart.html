@@ -52,7 +52,114 @@
         </div>
       </div>
     </header>
-    <main></main>
+    <main id="checkoutPage">
+      <!-- ====================  DETALHES  ===================== -->
+      <section class="details-box">
+        <h1>DETALHES:</h1>
+
+        <div class="route-box">
+          <h2 id="routeTitle">CIDADE 1 ⇄ CIDADE 2</h2>
+
+          <div class="route-info">
+            <div>
+              <strong id="category">EXECUTIVA</strong><br />
+              <p id="value">VALOR: 450,00 (Inteira)</p>
+              <p>Inteira</p>
+            </div>
+
+            <div>
+              <strong>IDA</strong><br />
+              <p id="departureDate">17/11/2025 às 12:15hrs</p>
+              <p id="departurePoint"></p>
+            </div>
+
+            <div>
+              <strong>VOLTA</strong><br />
+              <p id="returnDate">21/11/2025 às 10:30hrs</p>
+              <p id="returnPoint"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==================== PASSAGEIROS ===================== -->
+        <form id="passengerForm">
+          <table class="passenger-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Assento</th>
+                <th>Categoria</th>
+                <th>Valor</th>
+              </tr>
+            </thead>
+
+            <tbody id="passengerList">
+              <!-- Linhas geradas via JS -->
+            </tbody>
+          </table>
+        </form>
+
+        <button id="seatBtn" class="seat-btn">
+          ALTERAR ASSENTOS
+          <img
+            src="../public/icons/icon_edit.png"
+            alt="icon_edit"
+            onclick="editSeats()"
+          />
+        </button>
+      </section>
+
+      <!-- ÁREA DE PAGAMENTO -->
+      <aside class="payment-area" id="paymentArea">
+        <h2>Pagamento</h2>
+
+        <div class="payment-options">
+          <label>
+            <input type="radio" name="payment" value="boleto" />
+            Boleto
+          </label>
+          <label>
+            <input type="radio" name="payment" value="pix" />
+            PIX
+          </label>
+
+          <label>
+            <input type="radio" name="payment" value="debito" />
+            Débito
+          </label>
+
+          <label>
+            <input type="radio" name="payment" value="credito" />
+            Crédito
+          </label>
+        </div>
+
+        <!-- PARCELAS -->
+        <div id="installmentsBox" class="installments-box">
+          <label>Parcelas: </label>
+          <select id="installmentsSelect">
+            <option value="0" disabled selected>
+              Selecione a quantidade de parcelas
+            </option>
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="3">3x</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+          </select>
+        </div>
+
+        <p id="totalFinal">Total: R$ 0,00</p>
+
+        <button class="finish-btn" id="finishOrderBtn" disabled>
+          Finalizar Compra
+        </button>
+      </aside>
+    </main>
+
     <footer>
       <p>
         Copyright © Sem Parada |
@@ -64,6 +171,7 @@
       </p>
     </footer>
     <script type="module" src="../global/global/global.js"></script>
-    <script src="./cart.js"></script>
+    <script type="module" src="./cart.js"></script>
+    <script src="./validator.js"></script>
   </body>
 </html>

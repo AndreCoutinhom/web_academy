@@ -1,1 +1,248 @@
-/**/
+/* ==== LAYOUT PRINCIPAL ==== */
+#checkoutPage {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #e9eef1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ==== DETALHES / ESQUERDA ==== */
+.details-box {
+  flex: 3;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.details-box h1 {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+/* ==== BOX DA ROTA ==== */
+.route-box {
+  background: #7f8284;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.route-box h2 {
+  margin-bottom: 15px;
+}
+
+.route-info {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ==== TABELA DE PASSAGEIROS ==== */
+.passenger-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.passenger-table th {
+  background: #7f8284;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+}
+
+.passenger-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+/* Alterna cor das linhas */
+.passenger-table tr:nth-child(even) {
+  background: #f1f1f1;
+}
+
+.passenger-table tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+/* ==== BOTÃO EXCLUIR ==== */
+.delete-btn {
+  background: #9d4bbe;
+  border: none;
+  padding: 7px 13px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.delete-btn:hover {
+  opacity: 0.8;
+}
+
+.seat-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #044c92;
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  font-weight: bold;
+  font-size: 15px;
+
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  height: 40px;
+}
+
+.seat-btn img {
+  height: 18px;
+  width: auto;
+  object-fit: contain;
+}
+
+.seat-btn:hover {
+  transform: translateY(-1px) scale(1.02);
+  background: #055eb8;
+}
+
+.seat-btn:active {
+  transform: scale(0.98);
+  background: #044c92;
+}
+
+/* ========================== */
+/* ====== PAGAMENTO ========= */
+/* ========================== */
+.payment-box {
+  flex: 2;
+  background: #737679;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.payment-box h2 {
+  margin-bottom: 15px;
+}
+
+.payment-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.payment-options label {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.payment-options input {
+  margin-right: 5px;
+}
+
+/* ==== BOX DE PARCELAS ==== */
+.installments-box {
+  padding: 10px;
+  border-radius: 6px;
+  margin: 0;
+}
+
+.installments-box select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+}
+
+/*==========================*/
+
+.empty {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: #777;
+  text-align: center;
+}
+
+.payment-area {
+  width: 360px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 2rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+  border-top: 0.2rem solid #044c92;
+  border-bottom: 5px solid #012447;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  padding: 0;
+  margin: 0;
+}
+
+.installments-box select {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  margin: 0;
+}
+
+/* Button Finish */
+.finish-btn {
+  background: #004f26;
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(0.98);
+  transition: 0.3s ease;
+}
+
+.finish-btn:disabled {
+  transform: scale(0.96);
+  opacity: 0.5;
+}
+
+.finish-btn:enabled:hover {
+  background: #007539;
+  transform: scale(1);
+}
+
+.finish-btn:enabled:active {
+  transform: scale(0.96);
+  background: #004f26;
+}
+
+.inputError {
+  color: red;
+  font-size: 0.9em;
+  display: none;
+  margin-bottom: 0;
+}

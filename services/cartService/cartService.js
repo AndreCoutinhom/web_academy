@@ -1,10 +1,11 @@
 import { getLoggedUser } from "../loginService/loginService.js";
 
 export function saveOfferSelection(offerId) {
-  console.log("Saving offer selection for offerId:", offerId);
   const loggedUser = getLoggedUser();
-  if (!loggedUser) return;
-
+  if (!loggedUser) {
+    alert("É necessário estar logado. Por favor, faça login para continuar.");
+    return;
+  }
   let carts = JSON.parse(localStorage.getItem("carts")) || [];
 
   const existingIndex = carts.findIndex(

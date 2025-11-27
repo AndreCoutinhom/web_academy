@@ -24,6 +24,7 @@ function initializeAll() {
   initializeViagens();
 }
 
+/* Logout */
 const btn = document.getElementById("logoutButton");
 if (btn) {
   btn.addEventListener("click", logout);

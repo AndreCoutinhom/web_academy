@@ -2,15 +2,14 @@
 .container {
     width: 90%;
     max-width: 1000px;
-    margin: 40px auto;
     padding: 20px;
 }
 
 .title {
     text-align: center;
-    color: #333;
-    margin-bottom: 30px;
-    font-size: 28px;
+    font-size: 350%;
+    color: #044c92;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .history-card {
@@ -22,7 +21,7 @@
 }
 
 .card-header {
-    background: linear-gradient(#044c92, #012447); 
+    background:#012447; 
     padding: 15px 20px;
     border-radius: 8px 8px 0 0;
     text-align: center;
@@ -114,7 +113,7 @@
 
 /* --- Rodapé do Card do Histórico (aquela parte do Total) --- */
 .card-footer {
-    background: linear-gradient(#044c92, #012447);  
+    background:#044c92;  
     display: flex;
     justify-content: flex-end; 
     align-items: center;
@@ -131,30 +130,5 @@
 
 .total-amount {
     color: white;
-}
-
-
-footer {
-  padding: 0.5rem;
-  margin: 0;
-  text-align: center;
-  background: linear-gradient(#044c92, #012447);
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
-  margin-top: auto;
-}
-
-footer p {
-  font-size: 0.8rem;
-  margin: 0;
-  color: white;
-}
-
-footer a {
-  text-decoration: none;
-  color: white;
-}
-
-footer a:hover {
-  text-decoration: underline;
 }
 

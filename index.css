@@ -4,3 +4,29 @@
   justify-content: center;
   align-items: center;
 }
+
+#boas_vindas {
+  margin-left: 7%;
+  margin-right: 7%;
+  text-align: center;
+  color: #044c92;
+}
+
+#boas_vindas h1 {
+  font-size: 350%;
+}
+
+#boas_vindas h2 {
+  margin: 3%;
+  color: #012447;
+  font-size: 150%;
+}
+
+#boas_vindas p {
+  color: black;
+  font-size: 130%;
+}
+
+.main_texts img {
+    width: 180px;
+}

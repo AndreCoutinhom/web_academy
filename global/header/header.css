@@ -3,7 +3,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1% 15%;
-  background: linear-gradient(#044c92, #012447);
+  background: #044c92;
   width: 100%;
   max-height: 75px;
   top: 0;
@@ -124,7 +124,7 @@ header {
   top: calc(100% + 5px);
   right: 0;
   width: 230px;
-  background: linear-gradient(#044c92, #012447);
+  background: #012447;
   border-radius: 10px;
   padding: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);

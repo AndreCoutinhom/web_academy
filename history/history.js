@@ -1,15 +1,8 @@
-// history.js
-
-// Importando o serviço de login (necessário para filtrar o histórico)
 import { getLoggedUser } from '../services/loginService/loginService.js';
 
 document.addEventListener('DOMContentLoaded', initializeHistory);
 
-// ----------------------------------------------------
-// 1. Funções Auxiliares (Para formatação de dados)
-// ----------------------------------------------------
-
-function formatPaymentMethod(method) {
+function formatPaymentMethod(method) { //  Formata o método de pagamento para exibição legível (PIX, Cartão de Crédito, etc.)
     switch (method?.toLowerCase()) {
         case 'pix':
             return 'PIX';
@@ -24,7 +17,7 @@ function formatPaymentMethod(method) {
     }
 }
 
-function formatCurrency(value) {
+function formatCurrency(value) { // Formata valores monetários para o padrão brasileiro (R$ 0,00)
     const numericValue = parseFloat(value);
     return isNaN(numericValue) ? '0,00' : numericValue.toFixed(2).replace('.', ',');
 }
@@ -34,11 +27,7 @@ function formatDate(dateString) {
     return dateString ? dateString.replace(/:\d{2}$/, '').trim() : 'N/A';
 }
 
-// ----------------------------------------------------
-// 2. Função Principal de Inicialização e Renderização
-// ----------------------------------------------------
-
-function initializeHistory() {
+function initializeHistory() { // inicializa depois que carrega o html
     const loggedUser = getLoggedUser();
     const container = document.getElementById('history-container');
     
@@ -63,7 +52,7 @@ function initializeHistory() {
 
 function renderHistory(historyData, container) {
     
-    // Estado Vazio
+    // Estado Vazio. Caso não haja compras no histórico
     if (historyData.length === 0) {
         container.innerHTML = `
             <div class="empty-state">
@@ -81,7 +70,7 @@ function renderHistory(historyData, container) {
         
         // Dados Principais do Objeto de Compra
         const pedidoId = entry.offer.id;
-        const status = 'CONCLUÍDA'; // Assumindo concluída para itens no histórico
+        const status = 'CONCLUÍDA'; // Assumindo concluída para itens no histórico -- depois veremos outros status
         const dataCompra = formatDate(entry.date); 
         
         // Busca a origem de forma segura.
@@ -97,12 +86,11 @@ function renderHistory(historyData, container) {
         // Loop interno para os passageiros (A lista de passagens compradas)
         entry.passengers.forEach(passenger => {
             
-            // ✅ AJUSTE APLICADO: Força o trecho a ser 'IDA', ignorando as flags no assento.
             const trecho = 'IDA'; 
             
-            // O valor do assento no JSON contém '1C', '2A', etc.
-            // Remove flags de IDA e VOLTA para pegar apenas o número do assento
-            const assentoPuro = passenger.seat.replace('ID', '').replace('VOL', '');
+            const assentoPuro = passenger.seat.replace('ID', '').replace('VOL', ''); // a intenção aqui era fazer ida e volta mas ficou só ida por hora
+            
+            // Montagem do HTML de cada passageiro
             
             itemsHtml += `
                 <div class="cart-row item-row">
@@ -120,6 +108,11 @@ function renderHistory(historyData, container) {
         });
         
         // Criação do Cartão HTML completo
+
+    //   <!---- ${entry.offer.tipo} 
+    // ************************************************** 
+    // aqui antes era Ida e Volta, conforme a variável ---->
+
         htmlContent += `
             <div class="history-card">
                 <div class="card-header">
@@ -132,9 +125,6 @@ function renderHistory(historyData, container) {
                     <div class="detail-group">
                         <p><strong>Tipo de Viagem:</strong> Somente ida </p> 
                         
-                        <!---- $ { entry.offer.tipo } 
-                        ************************************************** 
-                        aqui antes era Ida e Volta, conforme a variável ---->
 
                         <p>
                             <strong>Pagamento:</strong> ${formatPaymentMethod(metodoPagamento)}
